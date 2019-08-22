@@ -1,5 +1,6 @@
 const listOfQuestions = [
-    {question: "What was the first full length CGI movie?", answer1: "Answer 1", answer2: "Answer 2", answer3: "Answer 3", answer4: "Answer 4"}
+    {question: "What was the first full length CGI movie?", answer1: "Answer 1", answer2: "Answer 2", answer3: "Answer 3", answer4: "Answer 4", final: "answer1"},
+    {question: "What was the answer?", answer1: "Answer 1", answer2: "Answer 2", answer3: "Answer 3", answer4: "Answer 4", final: "answer2"}
 ]
 
 let intervalId = 0;
@@ -47,4 +48,13 @@ $('#start').on("click", function () {
 });
 
 $('#answer1').on("click", function () {
+    if (timeRemaining > 0 && listOfQuestions[questionId].final === "answer1") {
+        //Success
+    }
+    else if (timeRemaining > 0) {
+        //Wrong Answer
+    }
+    else {
+        //Out of Time
+    }
 });
