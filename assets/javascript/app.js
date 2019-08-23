@@ -20,26 +20,66 @@ function displayQuestion() {
     $('#answer2').text(listOfQuestions[questionId].answer2);
     $('#answer3').text(listOfQuestions[questionId].answer3);
     $('#answer4').text(listOfQuestions[questionId].answer4);
-    $('#time-remaining').text(`Time Remaining: ${timeRemaining}`);
 }
 
 function startTimer() {
-    intervalId = setInterval(calculateTimeRemaining, 1000);
+    timeRemaining = 20;
+    $('#time-remaining').text(`Time Remaining: ${timeRemaining}`);
+    intervalId = setInterval(checkTimeRemaining, 1000);
+}
+
+function checkTimeRemaining() {
+    if (timeRemaining > 1) {
+        calculateTimeRemaining();
+    }
+    //Out of Time
+    else {
+        calculateTimeRemaining();
+        displayAnswer(false, "OUT OF TIME!");
+        displayNextQuestion();
+    }
 }
 
 function calculateTimeRemaining() {
-    if (timeRemaining > 0) {
-        timeRemaining--;
-        $('#time-remaining').text(`Time Remaining: ${timeRemaining}`);
+    timeRemaining--;
+    $('#time-remaining').text(`Time Remaining: ${timeRemaining}`);
+}
+
+function verifyAnswerChosen(answerClicked) {
+    //Correct Answer
+    if (listOfQuestions[questionId].final === answerClicked) {
+        displayAnswer(true, "CORRECT!");
     }
+    //Wrong Answer
     else {
-        stopTimer();
+        displayAnswer(false, "WRONG!");
+    }
+}
+
+function displayAnswer(isCorrect, resultText) {
+    stopTimer();
+    clearQuestion();
+    $('#question').text(`${resultText}`);
+    if (!isCorrect) {
+        $('#answer1').text(`The Correct Answer is: ${listOfQuestions[questionId].final}`);
     }
 }
 
 function stopTimer() {
     clearInterval(intervalId);
-    timeRemaining = 20;
+}
+
+function clearQuestion() {
+    $('#question').empty();
+    $('#answer1').empty();
+    $('#answer2').empty();
+    $('#answer3').empty();
+    $('#answer4').empty();
+}
+
+function displayNextQuestion() {
+    questionId++;
+    let timeoutId = setTimeout(startTrivia, 1000 * 3);
 }
 
 $('#start').on("click", function () {
@@ -48,13 +88,21 @@ $('#start').on("click", function () {
 });
 
 $('#answer1').on("click", function () {
-    if (timeRemaining > 0 && listOfQuestions[questionId].final === "answer1") {
-        //Success
-    }
-    else if (timeRemaining > 0) {
-        //Wrong Answer
-    }
-    else {
-        //Out of Time
-    }
+    verifyAnswerChosen("answer1");
+    displayNextQuestion();
+});
+
+$('#answer2').on("click", function () {
+    verifyAnswerChosen("answer2");
+    displayNextQuestion();
+});
+
+$('#answer3').on("click", function () {
+    verifyAnswerChosen("answer3");
+    displayNextQuestion();
+});
+
+$('#answer4').on("click", function () {
+    verifyAnswerChosen("answer4");
+    displayNextQuestion();
 });
