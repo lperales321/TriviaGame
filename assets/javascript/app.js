@@ -1,6 +1,25 @@
 const listOfQuestions = [
-    {question: "What was the first full length CGI movie?", answer1: "Answer 1", answer2: "Answer 2", answer3: "Answer 3", answer4: "Answer 4", final: "answer1"},
-    {question: "What was the answer?", answer1: "Answer 1", answer2: "Answer 2", answer3: "Answer 3", answer4: "Answer 4", final: "answer2"}
+    {question: "In The Silence of the Lambs, who is Buffalo Bill's victim the daughter of?", answer1: "A famous actress", answer2: "A senator", answer3: "A news anchor", answer4: "The preseident", final: "answer2"},
+    {question: "Who is the first person killed by Ghostface in Scream?", answer1: "Gale Weathers", answer2: "Casey Becker", answer3: "Tatum Riley", answer4: "Sidney Prescott", final: "answer2"},
+    {question: "When Michael Myers is a boy, who does he kill?", answer1: "His sister", answer2: "His mother", answer3: "His brother", answer4: "His friend", final: "answer1"},
+    {question: "In The Blair Witch Project, what does Heather find in front of the tent after Josh disappears?", answer1: "A pile of rocks", answer2: "A stick figure", answer3: "A bundle of sticks filled with blood and teeth", answer4: "A bloody knife", final: "answer3"},
+    {question: "What is the name of the camp in Friday the 13th?", answer1: "Camp Crystal Lake", answer2: "Camp Mooselake", answer3: "Camp Waziyata", answer4: "Camp Timber Lake", final: "answer1"},
+    {question: "How does Rachel avoid being killed by Samara in The Ring?", answer1: "She pushes her down the well.", answer2: "She burns the tape.", answer3: "She locks her in the barn attic.", answer4: "She makes a copy of the tape.", final: "answer4"},
+    {question: "In The Sixth Sense, how does Bruce Willis' character, Dr. Malcolm Crowe, die?", answer1: "Car accident", answer2: "Shot by a former patient", answer3: "Stabbed while getting mugged", answer4: "Suicide", final: "answer2"},
+    {question: "How does Freddy Krueger kill Rod in A Nightmare on Elm Street?", answer1: "Hangs him with bedsheets", answer2: "Slits his throat", answer3: "Lights him on fire", answer4: "Cuts him in half while in bed", final: "answer1"},
+    {question: "What are the children's names in The Others?", answer1: "Sam and Mary", answer2: "Nicholas and Anne", answer3: "Benjamin and Sarah", answer4: "Patrick and Emily", final: "answer2"},
+    {question: "What type of blood does Carrie get covered in?", answer1: "Chicken blood", answer2: "Cat blood", answer3: "Pig blood", answer4: "Human blood", final: "answer3"},
+    {question: "When is Rosemary's due date?", answer1: "July 15th", answer2: "October 7th", answer3: "March 13th", answer4: "June 28th", final: "answer4"},
+    {question: "In Alfred Hitchcock's classic film, Psycho, how much money does Marion Crane steal from her employers before fleeing to the Bates Motel?", answer1: "$10,000", answer2: "$25,000", answer3: "$30,000", answer4: "$40,000", final: "answer4"},
+    {question: "In Child's Play, what is the name of the boy that the doll attempts to possess?", answer1: "Andrew", answer2: "Charles", answer3: "Andy", answer4: "Robert", final: "answer3"},
+    {question: "Which horror movie series is the longest?", answer1: "Friday the 13th", answer2: "Nightmare on Elm Street", answer3: "Halloween", answer4: "Saw", final: "answer1"},
+    {question: "Who  does Regan attempt to contact on the Ouija Board?", answer1: "Captain Spaulding", answer2: "Captain Jack", answer3: "Captain Howdy", answer4: "Captain Holy", final: "answer3"},
+    {question: "What is the name that Steven Spielberg gave to the mechanical shark in 'Jaws'?", answer1: "Greg", answer2: "Bruce", answer3: "Steven", answer4: "Mike", final: "answer2"},
+    {question: "In 'Alien', how did Ripley kill the alien?", answer1: "Set it on fire", answer2: "She shot it", answer3: "Blew it out the airlock", answer4: "Blew it up", final: "answer1"},
+    {question: "Who plays Freddy Krueger in the original 'Nightmare on Elm Street' movies?", answer1: "Kurt Russell", answer2: "Brian Yuzna", answer3: "Keith Davis", answer4: "Robert Englund", final: "answer4"},
+    {question: "What is the character's name of the little boy in 'The Shining'?", answer1: "Johnny", answer2: "Danny", answer3: "Barry", answer4: "Jack", final: "answer2"},
+    {question: "In which movie trilogy did the main actress die through the making of the third one?", answer1: "Halloween", answer2: "Friday the 13th", answer3: "Poltergeist", answer4: "The Ring", final: "answer3"},
+    
 ]
 
 let intervalId = 0;
