@@ -44,6 +44,8 @@ function displayQuestion() {
 function startTimer() {
     timeRemaining = 20;
     $('#time-remaining').text(`Time Remaining: ${timeRemaining}`);
+
+    //Display timer every second
     intervalId = setInterval(checkTimeRemaining, 1000);
 }
 
@@ -102,6 +104,7 @@ function clearQuestion() {
 function displayNextQuestion() {
     questionId++;
 
+    //Wait three seconds before moving to next screen
     if (questionId !== listOfQuestions.length) {
         let timeoutId = setTimeout(startTrivia, 1000 * 3);
     }
